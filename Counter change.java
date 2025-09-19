@@ -1,24 +1,55 @@
 <html>
 <head>
- </head>
-<body>
- <h1> Counter<span id="counter">0</span></h1>
-  <button onclick="increase()">+</button>
-  <button onclick="decrease()">-</button>
-  <button onclick="Reset()">Reset</button>
+<style>
+body
+  {
+    display:flex;
+    justify-content:center;
+    display-flex:column;
+    height:100vh;
+  }
+.box
+  {
+    height:100px;
+    width:100px;
+    border:2px solid black;
+  }
+.btn
+  {
+    margin-top:20px;
+  }
+</style>
+  </head>
+  <body>
+   
+    <div class="container">
+      <h1 id="head">counter :<span id="counter">0</span></h1>
+<div class="btn">
+      <button onclick="increment()">+</button>
+       <button onclick="decrement()">-</button>
+        <button onclick="reset()">Reset</button>
+</div>
+</div>
 <script>
 let count=0;
-let counterelement=document.getElementById("counter");
-function increase()
+function increment()
   {
+    let el=document.getElementById("counter");
+   el.textContent = count;
     count++;
-     counterelement.textContent = count;
   }
-function decrease()
+function decrement()
   {
-    count--;
- counterelement.textContent = count;
+    let el=document.getElementById("counter");
+    el.textContent = count;
+  count--;
   }
-  </script>
-  </body>
-</html>\
+function reset() {
+  count = 0;
+  let el=document.getElementById("counter");
+el.textContent = count;
+}
+  
+</script>
+</body>
+</html>
