@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+body
+  {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+     height:100vh;
+     flex-direction:column;
+    
+  
+  }
+.box
+  {
+    height:100px;
+    width:100px;
+    border:2px solid black;
+   
+    }
+.active
+  {
+    background-color:red;
+  }
+#btn
+  {
+    margin-top:20px;
+  }
+</style>
+  </head>
+<body>
+  <div id="btn1"class="box"></div>
+  <button onclick="transition()"id="btn"> click me</button>
+<script>
+function transition()
+  {
+    let el=document.getElementById("btn1");
+     el.classList.toggle("active");
+
+  }
+</script>
+</body>
+</html>
