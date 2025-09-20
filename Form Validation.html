@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+body
+  {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+  
+    }
+.box
+  {
+    height:300px;
+    width:300px;
+   border:2px solid black;
+  display:flex;
+ flex-direction:column;
+
+  }
+.container input
+  {
+    width:200px;
+   margin-left:50px;
+  }
+.container label
+  {
+    margin-left:50px;
+    margin-top:10px;
+  }
+.container button
+  {
+    margin-top:40px;
+   width:150px;
+  margin-left:80px;
+  margin-right:40px;
+   background-color:green;
+  border-radius:10px;
+  }
+.box h1
+  {
+    margin-left:100px;
+  }
+  </style>
+  </head>
+<body>
+
+<div class="container">
+<form id="formid">
+  <div class="box">
+<h1> Login</h1>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+
+    <label for="email">Email</label>
+<input type="text" id="email">
+
+<label for="password">Password</label>
+      <input type="password" id="password">
+
+  <button type="submit">submit</button>
+
+</div>
+  </form>
+<p id="message"></p>
+</div>
+<script>
+const loginform=document.getElementById("formid");
+
+const testName="Rahul";
+const testEmail="Rahulcse71@gmail.com";
+const testPassword="ragul@2004";
+
+loginform.addEventListener("submit",function(event)
+{
+event.preventDefault();
+const name=document.getElementById("name").value;
+const email=document.getElementById("email").value;
+const enteredPassword=document.getElementById("password").value;
+
+  
+    if(email === testEmail && enteredPassword === testPassword && name === testName) {
+        message.style.color = "green";
+        message.textContent = "Login Successful";
+    } else {
+        message.style.color = "red";
+        message.textContent = "Invalid Name, Email, or Password";
+    }
+    });
+  </script>
+  </body>
+</html>
