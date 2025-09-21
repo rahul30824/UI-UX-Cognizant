@@ -23,7 +23,7 @@ body
   <body>
    
     <div class="container">
-      <h1 id="head">counter :<span id="counter">0</span></h1>
+      <h1 id="head">counter :<span id="counter">0</span></h1>//we are picking the counter id because we need to influence counter//
 <div class="btn">
       <button onclick="increment()">+</button>
        <button onclick="decrement()">-</button>
