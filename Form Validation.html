@@ -90,3 +90,65 @@ const enteredPassword=document.getElementById("password").value;
   </script>
   </body>
 </html>
+
+
+//More Simple and Elegate//
+<html>
+<head>
+<style>
+body
+  {
+    display:flex;
+   justify-content:center;
+   align-items:center;
+  height:100vh;
+  
+  }
+.box
+  {
+    height:300px;
+    width:300px;
+    border:2px solid black;
+    display:flex;
+   flex-direction:column;
+  }
+.box h1
+  {
+    margin-left:112px;
+  }
+</style>
+  </head>
+  <body>
+  <div class="box">
+  <h1>Login</h1>
+    <label for="name"> Name</label>
+  <input type="text" id="name">
+ <label for="email"> Email</label>
+   <input type="email" id="email">
+    <button type="button" onclick="validation()">Submit</button>
+
+   <p id="message"></p>
+</div>
+<script>
+const testname="rahul";
+const testemail="rahulcse71@gmail.com";
+function validation()
+  {
+    const name=document.getElementById('name').value;
+    const email=document.getElementById('email').value;
+const message=document.getElementById("message");
+if(name==testname && email==testemail)
+{
+  message.style.color='green';
+ message.textContent='Login Successfull';
+}
+else
+  {
+    message.style.color='red';
+   message.textContent='LoginFailed';
+  }
+  }
+</script>
+  </body>
+</html>
+
