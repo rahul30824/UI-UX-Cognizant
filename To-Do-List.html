@@ -52,7 +52,7 @@ const task=input.value.trim();
 if (task === "") return;
 
 const li=document.createElement('li');
-li.textContent = task;
+li.textContent = task;//it is used to display the Textcontent of the task//
  li.addEventListener('click', function() {
       li.classList.toggle('completed');
    });
